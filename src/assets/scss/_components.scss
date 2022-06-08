@@ -1,0 +1,183 @@
+/* 
+// 03.Components
+*/
+.btn.button-baru.primary {
+    padding: 30px 0;
+}
+
+.btn {
+    border-radius: 3px;
+    padding: 0;
+    font-size: 15px !important;
+    transition: all 0.5s;
+    font-weight: 700;
+    &:focus {
+        box-shadow: none !important;
+    }
+    &:hover {
+        transform: translateY(-2px);
+        transition: all 0.5s;
+    }
+    &.btn-lg {
+        padding: 10px 22px !important;
+        font-size: 18px !important;
+    }
+    &.btn-sm {
+        padding: 8px 16px !important;
+        font-size: 14px !important;
+    }
+    @each $color,
+    $value in $theme-colors {
+        &.btn-#{$color} {
+            background-color: #{$value} !important;
+            border: 1px solid #{$value} !important;
+            color: $white;
+            box-shadow: 0 4px 20px rgba($value, .15);
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+                background-color: #{darken($value, 3%)}!important;
+                border:1px solid #{darken($value, 3%)}!important;
+                box-shadow: 0 3px 10px rgba($value, 0.5);
+                color: $white !important;
+            }
+        }
+        &.btn-outline-#{$color} {
+            border: 1px solid #{$value} !important;
+            color: #{$value} !important;
+            &:hover,
+            &:focus,
+            &.focus,
+            &:active,
+            &.active {
+                background-color: #{$value} !important;
+                border:1px solid #{$value} !important;
+                box-shadow: 0 3px 10px rgba($value, 0.5);
+                color: $white !important;
+            }
+        }
+        &.btn-soft-#{$color} {
+            background-color: rgba($value, 0.18) !important;
+            color: #{$value} !important;
+        }
+    }
+    &.btn-light {
+        background-color: $light;
+        border: 1px solid $light;
+        color: $dark !important;
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: lighten($light, 3%);
+            border: 1px solid lighten($light, 3%);
+            box-shadow: 0 0 0 2px rgba($light, .08);
+            color: $dark !important;
+        }
+    }
+    &.btn-outline-light {
+        border: 1px solid $light;
+        color: $light !important;
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: $light;
+            border: 1px solid $light;
+            color: $dark !important;
+        }
+    }
+}
+
+
+
+.badge {
+    padding: 7px 18px;
+    font-size: 14px;
+    box-shadow: 0 2px 1px rgba(90, 79, 220, 0.3);
+}
+
+
+.subscribe-form {
+    display: flex;
+}
+
+.button-baru.second {
+    padding: 30px 0 10px 0;
+}
+
+.button-baru.second.nh a {
+    margin: 0!important;
+}
+
+.button-baru.second a {
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: 2px solid#fff;
+    text-decoration: none;
+    color: #fff!important;
+}
+
+.button-baru.primary a {
+    padding: 10px 20px!important;
+    margin-right: 20px;
+    background-color: #0b315e;
+    text-decoration: none;
+    border: 2px solid#0b315e;
+    color: #fff!important;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.button-baru.second a {
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: 2px solid#0b315e;
+    text-decoration: none;
+    color: #0b315e!important;
+    border-radius: 10px;
+}
+
+@each $color, $value in $theme-colors {
+    .badge {
+        &.badge-soft-#{$color} {
+            background: rgba($value, 0.12);
+            color: #{$value};        
+        }
+    }
+}
+
+@media (max-width: 640px){
+    .mobile{
+        display: block;
+        padding-top: 30px;
+    }
+
+    .mobile p.text-muted.mb-5.font-size-17 {
+        margin-bottom: 1em !important;
+    }
+
+    .hero-1-bg {
+        padding: 65px 0 0!important;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 641px){
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
