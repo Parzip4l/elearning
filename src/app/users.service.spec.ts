@@ -1,16 +1,31 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import {
+  HttpClient,
+  HttpHeaders,
+  HttpErrorResponse,
+} from '@angular/common/http';
+@Injectable({
+  providedIn: 'root',
+})
+export class NewsService {
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
+  API_URL = 'https://esca.co.id/esca_backend/api';
+  constructor(private http: HttpClient) { }
+  
+  getData() {
+    return this.http.get(`${this.API_URL}/news`);
+  }
 
-import { UsersService } from './users.service';
+  getNewsHome(){
+    return this.http.get(`${this.API_URL}/news_home`);
+  }
 
-describe('UsersService', () => {
-  let service: UsersService;
+  getNewsDetail(){
+    const last_segment = window.location.pathname.split('/').pop();
+    return this.http.get(`${this.API_URL}/news_detail/`+last_segment);
+  }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(UsersService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+ 
+}

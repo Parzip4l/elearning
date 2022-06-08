@@ -17,17 +17,22 @@ import { UserServices } from '../../users.service';
 
 export class IndexComponent implements OnInit {
 
-  currentSection = 'home';
+  currentSection = '';
 
 
-  constructor(private user:UserServices) { 
-    this.user.getData().subscribe(data=>{
-      console.warn(data)
-    });
-  }
+  constructor(private user:UserServices) {}
 
+  list:any;
 
   ngOnInit(): void {
+    this.user.getData()
+      .subscribe(response => {
+        this.list = response;
+        console.log(this.list);
+      });
+
+    
+    
   }
 
   /**

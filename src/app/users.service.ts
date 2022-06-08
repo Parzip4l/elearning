@@ -10,12 +10,11 @@ import {
   providedIn: 'root',
 })
 export class UserServices {
-
-      constructor(private http:HttpClient) {}
-
-      getData() 
-      {
-        let url="https://cityguard.id/learning_cityguard/api/learning";
-        return this.http.get(url);
-      }
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
+  API_URL = 'https://cityguard.id/learning_cityguard/api';
+  constructor(private http: HttpClient) { }
+  
+  getData() {
+    return this.http.get(`${this.API_URL}/learning`);
+  }
 }
