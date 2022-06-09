@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideoServices } from '../../video.service';
 
 @Component({
   selector: 'app-features',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private video:VideoServices) {}
+  vidapi:any;
 
   ngOnInit(): void {
+    this.video.getData()
+      .subscribe(response => {
+        this.vidapi = response;
+      });
   }
 
 }

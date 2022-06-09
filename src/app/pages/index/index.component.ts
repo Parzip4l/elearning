@@ -30,6 +30,7 @@ export class IndexComponent implements OnInit {
         this.list = response;
         console.log(this.list);
       });
+      
 
     
     

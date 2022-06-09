@@ -15,8 +15,5 @@ export class ServicesComponent implements OnInit {
       .subscribe(response => {
         this.list = response;
       });
-
-    
-      this.list = "asasasas";
   }
 }

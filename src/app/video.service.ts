@@ -7,14 +7,14 @@ import {
   HttpErrorResponse,
 } from '@angular/common/http';
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class UserServices {
+export class VideoServices {
   headers = new HttpHeaders().set('Content-Type', 'application/json');
-  API_URL = 'https://cityguard.id/learning_cityguard/api/learning';
+  API = 'https://cityguard.id/learning_cityguard/api/video';
   constructor(private http: HttpClient) { }
   
   getData() {
-    return this.http.get(`${this.API_URL}`);
+    return this.http.get(`${this.API}`);
   }
 }

@@ -4,7 +4,7 @@
     <div class="row align-items-center">
       <div class="col-lg-6">
         <div class="mb-4 mb-lg-0">
-          <h3 class="">Document{{ list }}</h3>
+          <h3 class="">Document</h3>
           <p class="text-muted mb-4 w-75">Nam libero tempore cum soluta as nobis est eligendi optio cumque nihile impedite
             quo minus id quod maxime.</p>
         </div>
@@ -13,107 +13,15 @@
     <div class="row align-items-center">
       <div class="col-lg-12">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3" *ngFor="let docs of list; let i = index">
             <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
               <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
+                <img src="assets/images/document.png" alt="{{ docs.judul }}" class="img-fluid d-block ml-auto">
               </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
+              <h5 class="font-weight-bold mb-2 wc-title mt-4">{{ docs.judul }}</h5>
+              <p class="text-muted mb-0 font-size-12 wc-subtitle" style="word-wrap: break-word;">{{ docs.deskripsi }}</p>
                 <div class="btn button-baru second nh">
-                  <a href="">Download</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                  <div class="btn button-baru second nh">
-                    <a href="">Download</a>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                <div class="btn button-baru second nh">
-                  <a href="">Download</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                <div class="btn button-baru second nh">
-                  <a href="">Download</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                <div class="btn button-baru second nh">
-                  <a href="">Download</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                  <div class="btn button-baru second nh">
-                    <a href="">Download</a>
-                  </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                <div class="btn button-baru second nh">
-                  <a href="">Download</a>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="wc-box rounded text-center wc-box-primary p-4 mt-md-5">
-              <div class="wc-box-icon">
-                <img src="assets/images/document.png" alt="" class="img-fluid d-block ml-auto">
-              </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">Document Title</h5>
-              <p class="text-muted mb-0 font-size-12 wc-subtitle">Sed ut perspiciatis unde omnis iste natus error sit
-                voluptatem.</p>
-                <div class="btn button-baru second nh">
-                  <a href="">Download</a>
+                  <a href="{{docs.url}}" target="_blank">Download</a>
                 </div>
             </div>
           </div>
