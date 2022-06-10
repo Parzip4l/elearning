@@ -93,14 +93,11 @@
     }
 }
 
-
-
 .badge {
     padding: 7px 18px;
     font-size: 14px;
     box-shadow: 0 2px 1px rgba(90, 79, 220, 0.3);
 }
-
 
 .subscribe-form {
     display: flex;
@@ -169,6 +166,23 @@
 
     .desktop {
         display: none;
+    }
+
+    .subscribe-form {
+        display: grid;
+    }
+
+    .subscribe-form .btn {
+        text-align: left;
+    }
+
+    .btn.button-baru.primary {
+        padding: 30px 0 10px 0;
+    }
+
+    .section {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 

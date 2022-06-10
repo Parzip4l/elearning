@@ -18,7 +18,9 @@
               <div class="wc-box-icon">
                 <img src="assets/images/document.png" alt="{{ docs.judul }}" class="img-fluid d-block ml-auto">
               </div>
-              <h5 class="font-weight-bold mb-2 wc-title mt-4">{{ docs.judul }}</h5>
+              <a href=" {{ docs.url }} " class="mediabox">
+                <h5 class="font-weight-bold mb-2 wc-title mt-4">{{ docs.judul }}</h5>
+              </a> 
               <p class="text-muted mb-0 font-size-12 wc-subtitle" style="word-wrap: break-word;">{{ docs.deskripsi }}</p>
                 <div class="btn button-baru second nh">
                   <a href="{{docs.url}}" target="_blank">Download</a>

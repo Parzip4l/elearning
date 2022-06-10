@@ -14,10 +14,10 @@
     <div class="row align-items-center">
       <div class="col-lg-12">
         <div class="row">
-          <div class="col-md-3" *ngFor="let vid of vidapi; let i = index">
+          <div class="col-md-3 mb-5" *ngFor="let vid of vidapi; let i = index">
             <div class="wc-box rounded text-left wc-box-primary p-4 mt-md-5">
-              <img src="assets/images/featured-img.jpg" alt="{{ vid.judul }}" class="img-fluid d-block ml-auto rounded">
-              <a href="{{vid.url}}" class="lightbox-toggle" target="_blank" class="mediabox">
+              <img src="{{ vid.cover }}" alt="{{ vid.judul }}" class="img-fluid d-block ml-auto rounded">
+              <a href="{{ vid.url }}" class="lightbox-toggle" target="_blank" class="mediabox">
                 <h5 class="font-weight-bold mb-2 wc-title mt-4">{{ vid.judul }}</h5>
               </a>
               <p class="text-muted mb-0 font-size-12 wc-subtitle" style="word-wrap: break-word;">{{ vid.deskripsi }}</p>

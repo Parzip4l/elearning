@@ -211,3 +211,10 @@ stroke-width: 3px;
 position: relative;
 top: -2px;
 }
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
